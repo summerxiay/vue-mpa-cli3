@@ -1,0 +1,74 @@
+@charset "utf-8";
+/**
+ * 基础样式
+ */
+/**
+ * 伪元素清除浮动
+ * 如果能形成bfc则不需要这个
+ */
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/**
+ * 单行 内容省略
+ */
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/**
+ * 特殊定位盒子
+ */
+.relative-ct {
+    position: relative;
+    /**
+     * 已知宽高 水平垂直居中
+     * 好处是不用 transform 避免神奇bug
+    */
+    .all-centered-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto; /* 精髓所在 */
+    }
+}
+/* 块级化，多用于a标签 */
+.dis-block {
+    display: block;
+}
+
+/* loading动画 */
+@keyframes loading {
+	0% { 
+        transform: rotate(0deg);
+    }
+	25% { 
+        transform: rotate(90deg);
+    }
+    50% { 
+        transform: rotate(180deg);
+    }
+    75% { 
+        transform: rotate(270deg);
+    }
+    100% { 
+        transform: rotate(360deg);
+    }
+}
+.iconfont.icon-loading {
+    display: inline-block;
+    animation: loading .8s linear infinite;
+}
+
+/* 待补充 */
+@media screen and (max-width: 1280px) {
+    html {
+        font-size: 14px;
+    }
+}
