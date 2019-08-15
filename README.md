@@ -1,4 +1,4 @@
-# zaozuo-nirvana
+# vue-mpa-cli3
 
 vue-cli3 + webpage 构建的多项目一个工程分包打包的多页面应用
 
